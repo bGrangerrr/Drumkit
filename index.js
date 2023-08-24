@@ -4,7 +4,10 @@ var querySlct = document.querySelectorAll(".drum");
 
  for (var i = 0; i < querySlct.length; i++) {
     querySlct[i].addEventListener("click", function(){
-         alert("I got clicked!");
+        
+        var audio = new Audio('sounds/tom-1.mp3');
+        audio.play();
+
      });
  }
 
