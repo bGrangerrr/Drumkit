@@ -25,7 +25,8 @@ document.addEventListener("keypress", function(event){
 });
 
 function makingSound(key) { //função que verifica/toca o audio correspondente
-                            // pelo Switch qual 'key' está sendo chamada via parâmetro
+                            // pelo Switch qual 'key' está sendo chamada via parâmetro.
+                            
     
     var tom1 = new Audio('sounds/tom-1.mp3');
     var tom2 = new Audio('sounds/tom-2.mp3');
