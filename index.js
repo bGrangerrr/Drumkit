@@ -15,18 +15,18 @@
             
            makingSound(drumsButtons); // chamar a função aqui também vai fazer com o que os Soms 
                                     //sejam chamados pelos botões 'w, a, s, d, j, k,l'
+           pressedButton(drumsButtons);                                     
          });
     }
 
 document.addEventListener("keypress", function(event){
 
     makingSound(event.key); // o addEventListener está buscando uma tecla do keyboard e passando para a função validar
-
+    pressedButton(event.key);
 });
 
 function makingSound(key) { //função que verifica/toca o audio correspondente
                             // pelo Switch qual 'key' está sendo chamada via parâmetro.
-                            
     
     var tom1 = new Audio('sounds/tom-1.mp3');
     var tom2 = new Audio('sounds/tom-2.mp3');
@@ -62,6 +62,15 @@ function makingSound(key) { //função que verifica/toca o audio correspondente
          break;
     }
 
+}
+
+function pressedButton(btnKey) {
+
+  var btnPrsed = document.querySelector("." + btnKey);
+  btnPrsed.classList.add("pressed");
+  setTimeout(function(){ 
+    btnPrsed.classList.remove("pressed");
+  }, 100);
 }
 
 
